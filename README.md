@@ -5,9 +5,9 @@ Sketch为一些杂项和底稿
 
 Test是一些滤波方法的测试
 
-Basic 0，1，2分别对应Basic的三种滤波方法，分别是Butterworth低通滤波，不完善的自适应滤波，和Wiener滤波。
+Basic 0，1，2分别对应Basic的三种滤波方法，分别是Butterworth低通滤波，不完善的自适应滤波，和Wiener滤波。运行output可以得到结果。
 
-Advance利用Wiener滤波实现。
+Advance利用Wiener滤波实现。注意在运行findparam的时候，不要运行细筛那一节。否则会出现过冲。
 
 构成的滤波系统均通过System Identification Toolbox进行拟合，6阶nominator，11阶denominator为最佳。
 
