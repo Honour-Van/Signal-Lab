@@ -14,8 +14,8 @@ elseif N1 < N2
     rt1 = [rt1 zeros(1, N2-N1)];
 end
 
-% N_window = 7;
-% rt1 = smoothdata(rt1,'sgolay' ,N_window);
+N_window = 7;
+rt1 = smoothdata(rt1,'sgolay' ,N_window);
 
 Rxx=xcorr(rt,rt);                                 %得到混合信号的自相关函数
 M=100;                                                      %维纳滤波器阶数
