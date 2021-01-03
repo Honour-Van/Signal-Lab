@@ -6,13 +6,13 @@
 $$
 H(e^{j\omega})=\begin{cases}1, & |\omega| \leq \omega_c\\ 0, & \omega_c < |\omega| \leq \pi\end{cases}
 $$
-<img src="D:\signal lab\README.assets\image-20201227105722093.png" alt="image-20201227105722093" style="zoom:50%;" />
+<img src="D:\workspace\tex\3" alt="image-20201227105722093" style="zoom:50%;" />
 
 为了实现非因果系统，可以有如下近似理想的低通滤波器：
 $$
 h_N[n] = \frac{\omega_c}{\pi}\mathrm{Sa}[\omega_c(n-N)]\left(u[n]-u[n-2N-1]\right)
 $$
-<img src="D:\signal lab\README.assets\image-20201227110224582.png" alt="image-20201227110224582" style="zoom:50%;" />
+<img src="D:\workspace\tex\4" alt="image-20201227110224582" style="zoom:50%;" />
 
 > $$
 > h[n]=\frac{1}{2\pi}\int_{-\omega_c}^{\omega_c}e^{j\omega n}\mathrm d\omega=\frac{\sin\omega_cn}{n\pi}=\frac{\omega_c}{\pi}\mathrm{Sa}(\omega_cn)
