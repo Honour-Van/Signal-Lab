@@ -1,34 +1,14 @@
 # Recovery of multi-path transmission signals
 
-## 理想低通滤波
+## 文件结构
+Sketch为一些杂项和底稿
+Test是一些滤波方法的测试
+Basic 0，1，2分别对应Basic的三种滤波方法，分别是Butterworth低通滤波，不完善的自适应滤波，和Wiener滤波。
+Advance利用Wiener滤波实现。
+构成的滤波系统均通过System Identification Toolbox进行拟合，6阶nominator，11阶denominator为最佳。
 
-课件Ch4-1 Filtering P47~48
-$$
-H(e^{j\omega})=\begin{cases}1, & |\omega| \leq \omega_c\\ 0, & \omega_c < |\omega| \leq \pi\end{cases}
-$$
-<img src="D:\workspace\tex\3" alt="image-20201227105722093" style="zoom:50%;" />
 
-为了实现非因果系统，可以有如下近似理想的低通滤波器：
-$$
-h_N[n] = \frac{\omega_c}{\pi}\mathrm{Sa}[\omega_c(n-N)]\left(u[n]-u[n-2N-1]\right)
-$$
-<img src="D:\workspace\tex\4" alt="image-20201227110224582" style="zoom:50%;" />
-
-> $$
-> h[n]=\frac{1}{2\pi}\int_{-\omega_c}^{\omega_c}e^{j\omega n}\mathrm d\omega=\frac{\sin\omega_cn}{n\pi}=\frac{\omega_c}{\pi}\mathrm{Sa}(\omega_cn)
-> $$
-
-##  滤除白噪可能的方法
-
-移动平均法（很朴素）适合于大趋势的分析
-
-中值滤波：会使得图像变得模糊。由于信噪比并不低，行不通。
-
-维纳滤波（LMS判据）
-
-自适应滤波
-
-# References
+## References
 
 七种方法：http://blog.sina.com.cn/s/blog_45eac6860102uyni.html
 
