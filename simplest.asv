@@ -1,6 +1,0 @@
-clear; close all; clc;
-load('data_basic_student_new.mat')
-load('basicsimplest.mat')
-rt = r_training(1, :);
-st = [s_training(1, :), zeros(1, 3)];
-sr = filter(tfb, tfa, )
